@@ -71,6 +71,50 @@ nav a:hover {
   padding: 9px;
   border-radius: 10px;
   cursor: pointer;
+  color: white;
+}
+
+/* Main */
+
+main {
+  margin-top: 35px;
+}
+
+/* Hero */
+
+.hero-container {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.hero-text {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.hero h1 {
+  font-size: 42px;
+  color: cadetblue;
+}
+
+.hero-text span {
+  color: orange;
+}
+
+.hero-text button {
+  border: none;
+  font-size: 15px;
+  background-color: orange;
+  padding: 9px;
+  border-radius: 10px;
+  cursor: pointer;
+  color: white;
 }
 
 @media (max-width: 992px) {
@@ -79,5 +123,20 @@ nav a:hover {
   }
   .closed-menu {
     display: block;
+  }
+  .hero-container {
+    flex-direction: column;
+    text-align: center;
+  }
+  .hero-image {
+    order: -1;
+    margin-bottom: 30px;
+  }
+}
+
+@media (max-width: 576px) {
+  .hero-image img {
+    max-width: 80%;
+    margin: 0 auto;
   }
 }
