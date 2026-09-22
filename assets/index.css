@@ -8,6 +8,7 @@
 header {
   align-items: center;
   padding: 20px 0;
+  border-bottom: 1px solid rgb(210, 208, 208);
 }
 
 .navbar {
@@ -17,6 +18,10 @@ header {
   display: flex;
   align-items: center;
   justify-content: space-between;
+}
+
+.closed-menu {
+  display: none;
 }
 
 nav ul {
@@ -38,4 +43,41 @@ nav ul {
 nav a {
   text-decoration: none;
   color: inherit;
+  display: inline-block;
+  transition: all 0.5s ease;
+}
+
+nav a:hover {
+  transform: scale(1.18);
+  color: red;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+}
+
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 27px;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+  color: orange;
+}
+
+.auth-buttons button {
+  border: none;
+  font-size: 15px;
+  background-color: orange;
+  padding: 9px;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+@media (max-width: 992px) {
+  nav ul {
+    display: none;
+  }
+  .closed-menu {
+    display: block;
+  }
 }

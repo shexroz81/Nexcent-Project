@@ -1,4 +1,4 @@
 const name = "Hello";
 console.log(name);
 export {};
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.js.maps
