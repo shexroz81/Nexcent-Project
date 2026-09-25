@@ -144,6 +144,36 @@ main {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+/* Client Sectio */
+
+.client {
+  padding: 40px 0;
+}
+.client-container {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  align-items: center;
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.client-text {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 17px;
+  color: rgb(89, 87, 87);
+}
+
+.client-icon {
+  width: 90%;
+  display: flex;
+  justify-content: space-between;
+}
+
 @media (max-width: 992px) {
   nav ul {
     display: none;
@@ -162,8 +192,36 @@ main {
 }
 
 @media (max-width: 576px) {
+  .logo {
+    font-size: 12px;
+  }
+  .logo img {
+    width: 35px;
+  }
+
+  .navbar {
+    gap: 26px;
+  }
+
   .hero-image img {
     max-width: 80%;
     margin: 0 auto;
+  }
+  .auth-buttons {
+    gap: 12px;
+    font-size: 16px;
+  }
+  .auth-buttons button {
+    font-size: 12px;
+    width: 60px;
+  }
+  .client-icon {
+    width: 70%;
+    flex-wrap: wrap;
+    /* flex-direction: column;
+    align-items: center; */
+  }
+  .client-icon img {
+    width: 80px;
   }
 }
