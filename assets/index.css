@@ -9,6 +9,7 @@ header {
   align-items: center;
   padding: 20px 0;
   border-bottom: 1px solid rgb(210, 208, 208);
+  position: relative;
 }
 
 .navbar {
@@ -53,15 +54,35 @@ nav a:hover {
   box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
+#nav {
+  display: none;
+  list-style: none;
+}
+
+#nav.active {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #fff;
+  padding: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.12);
+  z-index: 10;
+}
+
 .auth-buttons {
   display: flex;
   align-items: center;
   gap: 27px;
+  position: relative;
 }
 
 .auth-buttons a {
   text-decoration: none;
-  color: orange;
+  color: black;
 }
 
 .auth-buttons button {
@@ -115,6 +136,12 @@ main {
   border-radius: 10px;
   cursor: pointer;
   color: white;
+  transition: all 0.2s ease;
+}
+
+.hero-text button:hover {
+  transform: scale(1.01);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
 }
 
 @media (max-width: 992px) {
