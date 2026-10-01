@@ -234,6 +234,52 @@ main {
   line-height: 1.25;
 }
 
+.blog {
+  padding: 40px 0;
+}
+
+.blog-container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.blog-img {
+  width: 40%;
+}
+
+.blog-img img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}
+
+.blog-comment {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  width: 55%;
+}
+
+.blog-comment p {
+  line-height: 1.5;
+}
+
+.blog button {
+  width: 140px;
+  padding: 12px;
+  background-color: rgb(123, 164, 41);
+  color: white;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+}
+
 @media (max-width: 992px) {
   nav ul {
     display: none;
@@ -247,6 +293,13 @@ main {
   }
   .hero-image {
     order: -1;
+    margin-bottom: 30px;
+  }
+  .blog-container {
+    flex-direction: column;
+  }
+  .blog-img {
+    width: min(100%, 520px);
     margin-bottom: 30px;
   }
 }
