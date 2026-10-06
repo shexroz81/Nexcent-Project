@@ -5,18 +5,18 @@
     "text": "Member"
   },
   {
-    "icon": "fa-solid fa-user",
-    "num": 2617627,
-    "text": "Member"
+    "icon": "fa-solid fa-building",
+    "num": 2617,
+    "text": "Palce"
   },
   {
-    "icon": "fa-solid fa-user",
-    "num": 2617627,
-    "text": "Member"
+    "icon": "fa-solid fa-calendar",
+    "num": 365,
+    "text": "Days"
   },
   {
-    "icon": "fa-solid fa-user",
-    "num": 2617627,
-    "text": "Member"
+    "icon": "fa-solid fa-users",
+    "num": 261,
+    "text": "Club"
   }
 ]

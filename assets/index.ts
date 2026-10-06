@@ -50,13 +50,17 @@ class Info {
   }
 }
 
-const stats = [
-  new Info("fa-solid fa-users", 2245341, "Members"),
-  new Info("fa-solid fa-chart-line", 46328, "Growth"),
-  new Info("fa-solid fa-building", 1200, "Clients"),
-  new Info("fa-solid fa-calendar", 365, "Days"),
-];
+async function load(): Promise<void> {
+  try {
+    const res = await fetch("../assets/app.json");
+    const data = await res.json();
+    data.forEach((item: any) => {
+      const stat = new Info(item.icon, item.num, item.text);
+      document.getElementById("info-stats")?.appendChild(stat.render());
+    });
+  } catch (err) {
+    console.error(err);
+  }
+}
 
-stats.forEach((stat) => {
-  document.getElementById("info-stats")?.appendChild(stat.render());
-});
+load();

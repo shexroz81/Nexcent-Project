@@ -1,3 +1,12 @@
+var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, generator) {
+    function adopt(value) { return value instanceof P ? value : new P(function (resolve) { resolve(value); }); }
+    return new (P || (P = Promise))(function (resolve, reject) {
+        function fulfilled(value) { try { step(generator.next(value)); } catch (e) { reject(e); } }
+        function rejected(value) { try { step(generator["throw"](value)); } catch (e) { reject(e); } }
+        function step(result) { result.done ? resolve(result.value) : adopt(result.value).then(fulfilled, rejected); }
+        step((generator = generator.apply(thisArg, _arguments || [])).next());
+    });
+};
 const bar = document.getElementById("closed-menu");
 const menu = document.getElementById("nav");
 bar === null || bar === void 0 ? void 0 : bar.addEventListener("click", () => {
@@ -37,15 +46,22 @@ class Info {
         return div;
     }
 }
-const stats = [
-    new Info("fa-solid fa-users", 2245341, "Members"),
-    new Info("fa-solid fa-chart-line", 46328, "Growth"),
-    new Info("fa-solid fa-building", 1200, "Clients"),
-    new Info("fa-solid fa-calendar", 365, "Days"),
-];
-stats.forEach((stat) => {
-    var _a;
-    (_a = document.getElementById("info-stats")) === null || _a === void 0 ? void 0 : _a.appendChild(stat.render());
-});
+function load() {
+    return __awaiter(this, void 0, void 0, function* () {
+        try {
+            const res = yield fetch("../assets/app.json");
+            const data = yield res.json();
+            data.forEach((item) => {
+                var _a;
+                const stat = new Info(item.icon, item.num, item.text);
+                (_a = document.getElementById("info-stats")) === null || _a === void 0 ? void 0 : _a.appendChild(stat.render());
+            });
+        }
+        catch (err) {
+            console.error(err);
+        }
+    });
+}
+load();
 export {};
 //# sourceMappingURL=index.js.map
